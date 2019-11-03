@@ -7,7 +7,7 @@ body {
 	overflow: hidden;
 	padding: 0px;
 	margin: 0 auto;
-	background-image: url('../assets/Q2temp.jpg');
+	background-image: url('../assets/background-q2-03.png');
 	background-position: center center;
 	background-repeat: no-repeat;
 }
@@ -33,11 +33,17 @@ body {
 	border: 1px solid transparent;
 }
 
-.answerContainer {
+.score#boardScore {
+	font-size: 5em;
+	font-family: stratum;
+	text-align: center;
+	margin-top: 75px;
+}
+
+.gameContent {
 	width: 950px;
 	height: 520px;
-	margin: 250px auto;
-
+	margin: 0px 125px 0px 125px;
 }
 
 .question {
