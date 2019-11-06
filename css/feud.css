@@ -33,11 +33,40 @@ body {
 	border: 1px solid transparent;
 }
 
+.score {
+	font-size: 4em;
+	font-family: stratum;
+	text-align: center;
+	border: 4px groove #df6851;
+	width: 150px;
+	background-color: #f2c317;
+	color: #fff;
+	border-radius: 50px;
+}
+
+.score#team1 {
+	position: absolute;
+	left: 75px;
+	top: 250px;
+}
+
+.score#team2 {
+	position: absolute;
+	right: 75px;
+	top: 250px;
+}
+
 .score#boardScore {
 	font-size: 5em;
 	font-family: stratum;
 	text-align: center;
+	margin: auto;
 	margin-top: 75px;
+	border: 5px groove #df6851;
+	border-radius: 50px;
+	width: 175px;
+	background-color: #f2c317;
+	color: #fff;
 }
 
 .gameContent {
