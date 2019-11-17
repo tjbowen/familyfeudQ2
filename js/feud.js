@@ -1,5 +1,8 @@
 var currQuestion = 0;
 var numWrong = 0;
+var currScore = 0;
+var scoreTeam1 = 0;
+var scoreTeam2 = 0;
 
 var shouldListenForBuzzer = true;
 var isTeamDisplayed = true;
@@ -11,10 +14,9 @@ var correctAudio;
 
 $(document).ready(function() {
     console.log(json);
-    console.log(currQuestion)
-    // open_websocket();
     populateQuestion(currQuestion);
     initAudio();
+    newBoardScore()
 
     $(".xContainer").hide();
     $("body").click(function(){
@@ -33,7 +35,7 @@ $(document).ready(function() {
         }
 
         // 1-8 = reveal answer
-        if(e.keyCode >=49) {
+        if(e.keyCode >=49 && e.keyCode <= 65) {
             var keyNum = e.keyCode - 48;
             if(keyNum <= json[currQuestion].answers.length)
                 showAnswer(keyNum);
@@ -45,6 +47,11 @@ $(document).ready(function() {
              isTeamDisplayed = false;
             shouldListenForBuzzer = true;
         }
+        if(e.keyCode == 97){
+            addScoreTm1()
+        } else if(e.keyCode == 98)
+            addScoreTeam2()
+        
     });
 
 });
@@ -64,7 +71,28 @@ function showAnswer(answerNum) {
         $("#answer" + answerNum).find("p").toggle();
         $("#answer" + answerNum).find("div").toggle();
         $("#points" + answerNum).find("p").toggle();
+        newBoardScore()
         correctAudio.play();
+}
+
+function newBoardScore(){
+    if(event.keyCode >= 49 && event.keyCode <= 56){
+        var answerNum = event.keyCode - 49
+        var value = json[answerNum].points[answerNum]
+        currScore = currScore + value
+        console.log(currScore)
+        $("#boardScore").html(currScore)
+    }
+}
+
+function addScoreTm1(){
+        scoreTeam1 = scoreTeam1 + currScore
+        $("#team1").html(scoreTeam1)
+}
+
+function addScoreTeam2(){
+        scoreTeam2 = scoreTeam2 + currScore
+        $("#team2").html(scoreTeam2)
 }
 
 function populateQuestion(questionNum) {
@@ -109,10 +137,13 @@ function resetAnswerVisibility() {
 function nextQuestion() {
     currQuestion = currQuestion + 1;
     numWrong = 0;
+    currScore = 0
     resetAnswerVisibility();
     $(".revealText").hide();
     $(".answerNum").show();
-    populateQuestion(currQuestion);
+    $("#boardScore").html(currScore)
+    populateQuestion(currQuestion)
+    ;
 }
 
 

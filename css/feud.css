@@ -37,7 +37,7 @@ body {
 	font-size: 4em;
 	font-family: stratum;
 	text-align: center;
-	border: 4px groove #df6851;
+	border: 4px outset #df6851;
 	width: 150px;
 	background-color: #f2c317;
 	color: #fff;
@@ -62,7 +62,7 @@ body {
 	text-align: center;
 	margin: auto;
 	margin-top: 75px;
-	border: 5px groove #df6851;
+	border: 5px outset #df6851;
 	border-radius: 50px;
 	width: 175px;
 	background-color: #f2c317;
@@ -78,17 +78,20 @@ body {
 .question {
 	width: 940px;
 	height: 70px;
-	border: 5px solid #f2c317;
+	border: 5px outset #f2c317;
 	background-color: #df6851;
+	border-radius: 5px;
 	display: block;
 	margin-bottom: 50px;
 	color: #fff;
+	font-family: 'Poppins'
 }
 
 .answer {
 	width: 380px;
 	height: 75px;
 	border: 4px solid #f2c317;
+	border-radius: 5px;
 	border-right: 0px;
 	background-color: #df6851;
 	float: left;
@@ -100,12 +103,13 @@ body {
 	width: 65px;
 	height: 40px;
 	background-color: #f2c317; 
+	border: 4px outset #df6851;
 	margin: 12px 175px;
-	border-radius: 50%;
+	border-radius: 5px;
 	padding: 0px;
 	color: #fff;
 	font-size: 2em;
-	font-family: sans-serif;
+	font-family: 'Poppins';
 	text-align: center;
 	padding-top: 12px;
 }
@@ -136,7 +140,7 @@ body {
 	font-size: 1.5em;
 	letter-spacing: 0.7px;
 	font-weight: bold;
-	font-family: stratum;
+	font-family: 'Poppins';
 	margin: 20px;
 	text-align: center;
 }
