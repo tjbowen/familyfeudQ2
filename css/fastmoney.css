@@ -1,0 +1,87 @@
+@font-face {
+    font-family: stratum;
+    src: url('../assets/Stratum2-Regular.otf');
+}
+
+body {
+	overflow: hidden;
+	padding: 0px;
+	margin: 0 auto;
+	background-image: url('../assets/background-q2-03.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+.bodyContainer {
+	width: 1200px;
+	height: 798px;
+	margin: 0px auto;
+	border: 1px solid transparent;
+}
+
+.gameContent {
+	width: 950px;
+	height: 520px;
+    margin: 0 auto;
+    margin-top: 125px;
+    text-align: center;
+}
+
+.question {
+	width: 940px;
+	height: 70px;
+	border: 5px outset #f2c317;
+	background-color: #df6851;
+	border-radius: 5px;
+	display: block;
+	margin-bottom: 50px;
+	color: #fff;
+	font-family: 'Poppins'
+}
+
+.answer {
+	width: 380px;
+	height: 75px;
+	border: 4px solid #f2c317;
+	border-radius: 5px;
+	border-right: 0px;
+	background-color: #df6851;
+	float: left;
+	margin: 5px 0px 0px 0px;
+}
+
+.questionText {
+	font-size: 2em;
+	letter-spacing: 0.7px;
+	font-weight: bold;
+	font-family: 'Poppins';
+	margin: 15px;
+	text-align: center;
+}
+
+.answers {
+    margin: 0 auto;
+}
+
+.answerInputBox {
+    display: inline-block;
+    margin: 5px 20px 5px 20px;
+    width: 425px;
+}
+
+.answerInput {
+	margin: 0px;
+	width: 400px;
+	height: 40px;
+	background-color: white; 
+	border: 4px outset #df6851;
+	margin-top: 7px;
+	border-radius: 5px;
+	padding: 0px;
+	color: black;
+	font-size: 1.5em;
+	font-family: 'Poppins';
+	text-align: center;
+	padding-top: 12px;
+}
+
